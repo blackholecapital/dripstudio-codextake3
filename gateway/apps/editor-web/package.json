@@ -8,5 +8,29 @@
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "deploy:staging": "npm run build:worker && wrangler deploy --dry-run --env staging",
     "preview:worker": "npm run build:worker && wrangler dev --env staging --local --port 8788"
+  },
+  "dependencies": {
+    "@gateway/app-core": "0.0.0",
+    "@gateway/canvas-engine": "0.0.0",
+    "@gateway/core-types": "0.0.0",
+    "@gateway/deploy-sdk": "0.0.0",
+    "@gateway/env-sdk": "0.0.0",
+    "@gateway/schemas": "0.0.0",
+    "@gateway/ui": "0.0.0",
+    "@gateway/utils": "0.0.0",
+    "clsx": "^2.1.1",
+    "next": "^15.5.14",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250311.0",
+    "@opennextjs/cloudflare": "^1.0.0-beta.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "wrangler": "^4.7.0"
   }
 }
