@@ -1,0 +1,1 @@
+{ "name": "@gateway/app-core", "version": "0.0.0", "type": "module", "exports": { ".": "./src/index.ts" }, "dependencies": { "@gateway/core-types": "0.0.0", "@gateway/utils": "0.0.0" }, "scripts": { "typecheck": "tsc --project tsconfig.json --noEmit" } }
