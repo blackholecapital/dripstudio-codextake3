@@ -3,11 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "CI=1 next build",
+    "build": "opennextjs-cloudflare build",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "deploy:staging": "CI=1 npm run build:worker && CI=1 wrangler deploy --dry-run --env staging --config ./wrangler.toml",
-    "preview:worker": "CI=1 npm run build:worker && CI=1 wrangler dev --env staging --local --port 8788 --config ./wrangler.toml",
-    "build:worker": "CI=1 npm run build && CI=1 opennextjs-cloudflare build --skipNextBuild --config ./wrangler.toml"
+    "deploy:staging": "opennextjs-cloudflare build && wrangler deploy --dry-run --env staging",
+    "preview:worker": "opennextjs-cloudflare build && wrangler dev --env staging --local --port 8788"
   },
   "dependencies": {
     "@gateway/app-core": "0.0.0",
@@ -29,8 +28,6 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "wrangler": "^4.7.0",
-    "@types/react": "0.0.0",
-    "@types/react-dom": "0.0.0"
+    "wrangler": "^4.7.0"
   }
 }

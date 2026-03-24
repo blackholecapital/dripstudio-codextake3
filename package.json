@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspace @gateway/editor-web",
-    "build": "npm run build:worker --workspace @gateway/editor-web",
+    "build": "npm run build --workspace @gateway/editor-web",
     "test": "tsx --test gateway/tests/unit/**/*.test.ts",
     "typecheck": "npm run typecheck --workspace @gateway/editor-web && npm run typecheck --workspaces --if-present --include-workspace-root=false",
     "lint": "npm run typecheck",

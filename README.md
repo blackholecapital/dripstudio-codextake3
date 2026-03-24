@@ -44,24 +44,13 @@ npm run preview:worker
 
 This uses the staging environment section from `wrangler.toml` and serves the OpenNext Worker locally.
 
-
-## Cloudflare project setting
-
-For Cloudflare CI, set **Project root directory** to:
-
-```text
-gateway/apps/editor-web
-```
-
-This ensures OpenNext runs from the app workspace where `open-next.config.ts` and the app-local `wrangler.toml` are resolved without interactive prompts.
-
 ## Build
 
 ```bash
 npm run build
 ```
 
-This generates Cloudflare Worker output under `gateway/apps/editor-web/.open-next/`. The app uses app-local `open-next.config.ts` + `wrangler.toml` and a split build flow (`next build` then `opennextjs-cloudflare build --skipNextBuild`) so monorepo CI remains non-interactive and avoids recursive build invocation. Build/deploy scripts set `CI=1` for non-interactive packaging.
+This generates Cloudflare Worker output under `gateway/apps/editor-web/.open-next/`.
 
 ## Tests and checks
 
