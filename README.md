@@ -50,7 +50,7 @@ This uses the staging environment section from `wrangler.toml` and serves the Op
 npm run build
 ```
 
-This generates Cloudflare Worker output under `gateway/apps/editor-web/.open-next/`. The app includes `open-next.config.ts`, and the build/deploy scripts set `CI=1` so Cloudflare packaging stays non-interactive in CI.
+This generates Cloudflare Worker output under `gateway/apps/editor-web/.open-next/`.
 
 ## Tests and checks
 

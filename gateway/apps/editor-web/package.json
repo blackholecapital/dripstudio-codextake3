@@ -3,10 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "CI=1 opennextjs-cloudflare build",
+    "build": "opennextjs-cloudflare build",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "deploy:staging": "CI=1 opennextjs-cloudflare build && CI=1 wrangler deploy --dry-run --env staging",
-    "preview:worker": "CI=1 opennextjs-cloudflare build && CI=1 wrangler dev --env staging --local --port 8788"
+    "deploy:staging": "opennextjs-cloudflare build && wrangler deploy --dry-run --env staging",
+    "preview:worker": "opennextjs-cloudflare build && wrangler dev --env staging --local --port 8788"
   },
   "dependencies": {
     "@gateway/app-core": "0.0.0",
