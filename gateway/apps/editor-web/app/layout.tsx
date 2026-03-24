@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description: 'Cloudflare Worker deployable shell foundation for Segment 1.'
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+import type { ReactNode } from 'react';
+
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body>{children}</body>
