@@ -1,1 +1,1 @@
-{ "name": "@gateway/schemas", "version": "0.0.0", "type": "module", "exports": { ".": "./src/index.ts" }, "dependencies": { "next": "^15.2.4", "@gateway/core-types": "0.0.0" }, "scripts": { "typecheck": "tsc --project tsconfig.json --noEmit" } }
+{ "name": "@gateway/schemas", "version": "0.0.0", "type": "module", "exports": { ".": "./src/index.ts" }, "scripts": { "typecheck": "tsc --project tsconfig.json --noEmit" } }

@@ -9,4 +9,3 @@ npm-debug.log*
 .DS_Store
 wrangler.json
 .dev.vars
-*.tsbuildinfo
