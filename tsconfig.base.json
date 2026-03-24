@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "es2022"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@gateway/core-types": ["gateway/packages/core-types/src/index.ts"],
+      "@gateway/schemas": ["gateway/packages/schemas/src/index.ts"],
+      "@gateway/app-core": ["gateway/packages/app-core/src/index.ts"],
+      "@gateway/canvas-engine": ["gateway/packages/canvas-engine/src/index.ts"],
+      "@gateway/ui": ["gateway/packages/ui/src/index.ts"],
+      "@gateway/env-sdk": ["gateway/packages/env-sdk/src/index.ts"],
+      "@gateway/deploy-sdk": ["gateway/packages/deploy-sdk/src/index.ts"],
+      "@gateway/utils": ["gateway/packages/utils/src/index.ts"]
+    }
+  }
+}
