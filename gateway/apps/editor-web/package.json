@@ -1,0 +1,36 @@
+{
+  "name": "@gateway/editor-web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "deploy:staging": "CI=1 npm run build:worker && CI=1 wrangler deploy --dry-run --env staging --config ./wrangler.toml",
+    "preview:worker": "CI=1 npm run build:worker && CI=1 wrangler dev --env staging --local --port 8788 --config ./wrangler.toml",
+    "build:worker": "CI=1 npm run build && CI=1 opennextjs-cloudflare build --skipNextBuild --config ./wrangler.toml"
+  },
+  "dependencies": {
+    "@gateway/app-core": "0.0.0",
+    "@gateway/canvas-engine": "0.0.0",
+    "@gateway/core-types": "0.0.0",
+    "@gateway/deploy-sdk": "0.0.0",
+    "@gateway/env-sdk": "0.0.0",
+    "@gateway/schemas": "0.0.0",
+    "@gateway/ui": "0.0.0",
+    "@gateway/utils": "0.0.0",
+    "clsx": "^2.1.1",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250311.0",
+    "@opennextjs/cloudflare": "^1.0.0-beta.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "wrangler": "^4.7.0",
+    "@types/react": "file:../../packages/types-react",
+    "@types/react-dom": "file:../../packages/types-react-dom"
+  }
+}
