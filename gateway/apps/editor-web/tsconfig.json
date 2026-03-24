@@ -1,0 +1,25 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./*"],
+      "@gateway/core-types": ["../../packages/core-types/src/index.ts"],
+      "@gateway/schemas": ["../../packages/schemas/src/index.ts"],
+      "@gateway/app-core": ["../../packages/app-core/src/index.ts"],
+      "@gateway/canvas-engine": ["../../packages/canvas-engine/src/index.ts"],
+      "@gateway/ui": ["../../packages/ui/src/index.ts"],
+      "@gateway/env-sdk": ["../../packages/env-sdk/src/index.ts"],
+      "@gateway/deploy-sdk": ["../../packages/deploy-sdk/src/index.ts"],
+      "@gateway/utils": ["../../packages/utils/src/index.ts"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

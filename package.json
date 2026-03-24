@@ -1,0 +1,22 @@
+{
+  "name": "gateway",
+  "private": true,
+  "workspaces": [
+    "gateway/apps/*",
+    "gateway/packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @gateway/editor-web",
+    "build": "npm run build:worker --workspace @gateway/editor-web",
+    "test": "tsx --test gateway/tests/unit/**/*.test.ts",
+    "typecheck": "npm run typecheck --workspace @gateway/editor-web && npm run typecheck --workspaces --if-present --include-workspace-root=false",
+    "lint": "npm run typecheck",
+    "deploy:staging": "npm run deploy:staging --workspace @gateway/editor-web",
+    "preview:worker": "npm run preview:worker --workspace @gateway/editor-web"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
