@@ -1,0 +1,43 @@
+name = "gateway-editor-web"
+main = "./gateway/apps/editor-web/.open-next/worker.js"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+assets = { directory = "./gateway/apps/editor-web/.open-next/assets", binding = "ASSETS" }
+workers_dev = true
+
+[vars]
+APP_ENV = "production"
+DEMO_PREVIEW_URL = "https://demo-preview.example.com"
+GATEWAY_PREVIEW_URL = "https://gateway-preview.example.com"
+DEMO_BUCKET = "demo-bucket-placeholder"
+PROD_BUCKET = "prod-bucket-placeholder"
+
+[[r2_buckets]]
+binding = "DEMO_BUCKET_BINDING"
+bucket_name = "demo-bucket-placeholder"
+preview_bucket_name = "demo-bucket-preview-placeholder"
+
+[[r2_buckets]]
+binding = "PROD_BUCKET_BINDING"
+bucket_name = "prod-bucket-placeholder"
+preview_bucket_name = "prod-bucket-preview-placeholder"
+
+[env.staging]
+name = "gateway-editor-web-staging"
+
+[env.staging.vars]
+APP_ENV = "staging"
+DEMO_PREVIEW_URL = "https://staging-demo-preview.example.com"
+GATEWAY_PREVIEW_URL = "https://staging-gateway-preview.example.com"
+DEMO_BUCKET = "staging-demo-bucket-placeholder"
+PROD_BUCKET = "staging-prod-bucket-placeholder"
+
+[[env.staging.r2_buckets]]
+binding = "DEMO_BUCKET_BINDING"
+bucket_name = "staging-demo-bucket-placeholder"
+preview_bucket_name = "staging-demo-bucket-preview-placeholder"
+
+[[env.staging.r2_buckets]]
+binding = "PROD_BUCKET_BINDING"
+bucket_name = "staging-prod-bucket-placeholder"
+preview_bucket_name = "staging-prod-bucket-preview-placeholder"
